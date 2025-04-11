@@ -47,7 +47,6 @@
 
       #user-input input {
         padding: 8px;
-        border-radius: none;
         border: 3px solid #0a2463;
         margin-right: 8px;
       }
@@ -58,15 +57,16 @@
 
       #user-input button {
         padding: 8px;
-        border-radius: none;
         border: 3px solid #0a2463;
         background-color: #2C76A7;
         color: #fffaff;
         font-weight: bold;
+        margin-right: 8px;
       }
 
       /* result div */
-      #result {
+      #result,
+      #brute-result {
         margin-top: 16px;
         background-color: #3e92cc;
         padding: 8px;
@@ -82,12 +82,17 @@
   <body>
     <div id="wrapper">
       <span id="sha256-hash"></span>
+
       <div id="user-input">
-        <input type="text" id="pin" />
+        <input type="text" id="pin" placeholder="Enter 3-digit PIN" />
         <button id="check">Check</button>
+        <button id="brute-force">Brute Force</button>
       </div>
+
       <div id="result" class="hidden"></div>
+      <div id="brute-result"></div>
     </div>
+
     <script src="script.js" async></script>
   </body>
 </html>
